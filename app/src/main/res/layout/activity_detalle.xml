@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F6FA"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DETALLE DEL PRODUCTO"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:textColor="#17324D"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/tvNombreProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre del producto"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#17324D"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/tvPrecioProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Precio: Q0.00"
+        android:textSize="17sp"
+        android:textColor="#475569"/>
+
+    <TextView
+        android:id="@+id/tvExistencias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Existencias: 0"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#219C75"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Movimiento de inventario"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:textColor="#17324D"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/etCantidadMovimiento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad de unidades"
+        android:inputType="number"
+        android:padding="12dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnEntrada"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ENTRADA"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#219C75"/>
+
+        <Button
+            android:id="@+id/btnSalida"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SALIDA"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#E89016"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Historial de movimientos"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:textColor="#17324D"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="8dp"/>
+
+    <ListView
+        android:id="@+id/listViewMovimientos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#DCE4ED"
+        android:dividerHeight="1dp"/>
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VOLVER A PRODUCTOS"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#17324D"/>
+
+</LinearLayout>

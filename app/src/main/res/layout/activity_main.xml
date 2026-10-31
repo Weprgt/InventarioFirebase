@@ -1,19 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:background="#F3F6FA"
+    android:padding="16dp">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="INVENTARIO FIREBASE"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#17324D"
+        android:gravity="center"
+        android:padding="12dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Administración de productos"
+        android:textSize="14sp"
+        android:textColor="#64748B"
+        android:gravity="center"
+        android:layout_marginBottom="18dp"/>
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre del producto"
+        android:inputType="textCapSentences"
+        android:singleLine="true"
+        android:padding="12dp"
+        android:layout_marginBottom="6dp"/>
+
+    <EditText
+        android:id="@+id/etDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripción"
+        android:inputType="textCapSentences"
+        android:singleLine="true"
+        android:padding="12dp"
+        android:layout_marginBottom="6dp"/>
+
+    <EditText
+        android:id="@+id/etPrecio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precio (Q)"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:layout_marginBottom="6dp"/>
+
+    <EditText
+        android:id="@+id/etCantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad disponible"
+        android:inputType="number"
+        android:padding="12dp"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="GUARDAR PRODUCTO"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#219C75"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnActualizar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ACTUALIZAR"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#E89016"/>
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ELIMINAR"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#D9534F"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnLimpiar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LIMPIAR FORMULARIO"
+        android:textColor="#17324D"
+        android:backgroundTint="#DCE4ED"/>
+
+    <Button
+        android:id="@+id/btnDetalle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VER DETALLE DEL PRODUCTO"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#17324D"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Productos registrados"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#17324D"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <ListView
+        android:id="@+id/listViewProductos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#DCE4ED"
+        android:dividerHeight="1dp"/>
+
+</LinearLayout>
+
