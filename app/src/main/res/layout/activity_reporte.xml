@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F6FA"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="REPORTE DE INVENTARIO"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:textColor="#17324D"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:id="@+id/tvTotalProductos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Productos\n0"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#17324D"/>
+
+        <TextView
+            android:id="@+id/tvTotalUnidades"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Unidades\n0"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#219C75"/>
+
+        <TextView
+            android:id="@+id/tvValorInventario"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Valor\nQ 0.00"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#E89016"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PRODUCTOS CON POCAS EXISTENCIAS"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#17324D"
+        android:layout_marginBottom="8dp"/>
+
+    <ListView
+        android:id="@+id/listViewBajoStock"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#DCE4ED"
+        android:dividerHeight="1dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BUSCAR PRODUCTO"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:textColor="#17324D"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/etBuscarProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escribe el nombre del producto"
+        android:inputType="text"
+        android:singleLine="true"
+        android:padding="12dp"/>
+
+    <ListView
+        android:id="@+id/listViewResultados"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="#DCE4ED"
+        android:dividerHeight="1dp"/>
+
+    <Button
+        android:id="@+id/btnVolverProductos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VOLVER A PRODUCTOS"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#17324D"/>
+
+</LinearLayout>

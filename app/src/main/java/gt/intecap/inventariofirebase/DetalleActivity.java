@@ -199,7 +199,7 @@ public class DetalleActivity extends AppCompatActivity {
                     public Transaction.Result doTransaction(
                             MutableData currentData) {
 
-                        Number actual = currentData.getValue(Number.class);
+                        Integer actual = currentData.getValue(Integer.class);
 
                         if (actual == null) {
                             return Transaction.abort();

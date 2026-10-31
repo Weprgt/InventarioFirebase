@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private DatabaseReference databaseReference;
 
     private EditText etNombre, etDescripcion, etPrecio, etCantidad;
-    private Button btnGuardar, btnActualizar, btnEliminar, btnLimpiar, btnDetalle;
+    private Button btnGuardar, btnActualizar, btnEliminar, btnLimpiar, btnDetalle, btnReportes;
     private ListView listViewProductos;
 
     private ArrayList<Producto> productos;
@@ -74,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
         btnActualizar.setOnClickListener(v -> actualizarProducto());
         btnEliminar.setOnClickListener(v -> eliminarProducto());
         btnLimpiar.setOnClickListener(v -> limpiarFormulario());
+        btnDetalle = findViewById(R.id.btnDetalle);
+        btnReportes = findViewById(R.id.btnReportes);
         btnDetalle.setOnClickListener(v -> {
             if (idSeleccionado == null) {
                 mensaje("Primero selecciona un producto de la lista");
@@ -83,8 +85,10 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("productoId", idSeleccionado);
             startActivity(intent);
         });
-        btnDetalle = findViewById(R.id.btnDetalle);
-
+        btnReportes.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, ReporteActivity.class);
+            startActivity(intent);
+        });
         listViewProductos.setOnItemClickListener(
                 (parent, view, position, id) -> {
 

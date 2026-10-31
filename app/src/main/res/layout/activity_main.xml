@@ -113,6 +113,14 @@
         android:textColor="#FFFFFF"
         android:backgroundTint="#17324D"/>
 
+    <Button
+        android:id="@+id/btnReportes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VER REPORTES"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#17324D"/>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
